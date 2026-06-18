@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayush Raj — AI/ML Engineer &amp; Data Scientist</title>
+  <meta name="description" content="Portfolio of Ayush Raj — AI/ML enthusiast, B.Tech CSE student at VIT Bhopal. Specializing in Machine Learning, Deep Learning, and Data Science." />
+  <meta name="keywords" content="Ayush Raj, AI, ML, Machine Learning, Data Science, Portfolio, VIT Bhopal" />
+  <meta name="author" content="Ayush Raj" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ayush Raj — AI/ML Engineer" />
+  <meta property="og:description" content="AI/ML enthusiast specializing in Machine Learning, Deep Learning, and Data Science." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="nav-logo">AR.</a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="#education" class="nav-link" data-section="education">Education</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+        <a href="#certifications" class="nav-link" data-section="certifications">Certs</a>
+        <a href="#achievements" class="nav-link" data-section="achievements">Achievements</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       1. HERO / LANDING
+       ============================================================ -->
+  <section class="hero section" id="hero">
+    <!-- Floating orbs -->
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-greeting reveal">
+          <span class="wave">👋</span> Hello, I'm
+        </p>
+
+        <h1 class="hero-name reveal">
+          Ayush <span class="gradient-text">Raj</span>
+        </h1>
+
+        <div class="hero-tags reveal stagger-children">
+          <span class="hero-tag"><span class="tag-dot"></span> AI / ML Engineer</span>
+          <span class="hero-tag"><span class="tag-dot"></span> Data Scientist</span>
+          <span class="hero-tag"><span class="tag-dot"></span> Deep Learning</span>
+          <span class="hero-tag"><span class="tag-dot"></span> Computer Vision</span>
+        </div>
+
+        <p class="hero-description reveal">
+          A passionate B.Tech Computer Science student at VIT Bhopal, driven by a deep fascination for 
+          Artificial Intelligence and Machine Learning. I transform complex data into actionable insights 
+          and build intelligent systems that solve real-world problems — from weed detection models 
+          achieving 92% accuracy to leading data science communities.
+        </p>
+
+        <div class="hero-cta reveal">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fa-solid fa-rocket"></i> View My Work
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fa-solid fa-paper-plane"></i> Get In Touch
+          </a>
+        </div>
+
+        <div class="hero-socials reveal">
+          <a href="https://github.com/" class="social-link" target="_blank" rel="noopener" aria-label="GitHub" id="social-github">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/feed/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn" id="social-linkedin">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:ayushra6111@gmail.com" class="social-link" aria-label="Email" id="social-email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       2. ABOUT ME
+       ============================================================ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">About Me</p>
+        <h2 class="section-title">Who I Am</h2>
+        <p class="section-subtitle">A snapshot of my journey, mission, and what drives me forward.</p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Avatar / Monogram -->
+        <div class="about-avatar-wrap reveal-left">
+          <div class="about-avatar">
+            <span class="monogram">AR</span>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="about-content reveal-right">
+          <h3>Passionate about building AI that matters.</h3>
+          <p>
+            I'm Ayush Raj, a B.Tech Computer Science and Engineering student at VIT Bhopal University 
+            with a specialization in AI &amp; Machine Learning. My journey started with curiosity about 
+            how machines learn from data, and it has evolved into a mission to build intelligent systems 
+            that create tangible impact.
+          </p>
+          <p>
+            From leading the Data Science Club as Event Team Lead to developing computer vision models 
+            for precision agriculture, I thrive at the intersection of innovation and execution. I believe 
+            in continuous learning, collaborative problem-solving, and pushing the boundaries of what's possible.
+          </p>
+
+          <!-- Mission & Vision Flip Cards -->
+          <div class="flip-cards">
+            <div class="flip-card reveal">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <span class="flip-icon">🎯</span>
+                  <h4>My Mission</h4>
+                  <p class="flip-hint">Hover to reveal</p>
+                </div>
+                <div class="flip-card-back">
+                  <p>To leverage AI and Machine Learning to solve real-world challenges — making technology accessible, impactful, and meaningful for communities and industries alike.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card reveal">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <span class="flip-icon">🔭</span>
+                  <h4>My Vision</h4>
+                  <p class="flip-hint">Hover to reveal</p>
+                </div>
+                <div class="flip-card-back">
+                  <p>To become a leading AI researcher and engineer who bridges the gap between cutting-edge research and practical applications, empowering the next generation of data scientists.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick-nav buttons -->
+          <div class="about-nav-btns stagger-children reveal">
+            <a href="#experience" class="about-nav-btn">💼 Experience</a>
+            <a href="#projects" class="about-nav-btn">🚀 Projects</a>
+            <a href="#skills" class="about-nav-btn">⚡ Skills</a>
+            <a href="#certifications" class="about-nav-btn">📜 Certifications</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       3. WORK EXPERIENCE
+       ============================================================ -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Experience</p>
+        <h2 class="section-title">Where I've Worked</h2>
+        <p class="section-subtitle">Leadership roles and collaborative experiences that shaped my skills.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Role 1: Data Science Club -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="exp-card" id="exp-card-1">
+            <div class="exp-card-content">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Event Team Lead</h3>
+                  <p class="exp-org">Data Science Club — VIT Bhopal</p>
+                </div>
+                <span class="exp-period">2023 — Present</span>
+              </div>
+              <ul class="exp-list">
+                <li>Led and coordinated data science workshops, hackathons, and technical events for 200+ members</li>
+                <li>Organized hands-on sessions on Python, Machine Learning, and Data Visualization</li>
+                <li>Mentored junior members in ML project development and Kaggle competitions</li>
+                <li>Progressed from Club Member → Co-Lead → Lead of the Event Team</li>
+                <li>Increased club engagement by 40% through innovative event formats</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="exp-tag">Leadership</span>
+                <span class="exp-tag">Event Management</span>
+                <span class="exp-tag">Data Science</span>
+                <span class="exp-tag">Mentorship</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Role 2: Maharashtrian Club -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="exp-card" id="exp-card-2">
+            <div class="exp-card-content">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Active Member &amp; Organizer</h3>
+                  <p class="exp-org">Maharashtrian Club — VIT Bhopal</p>
+                </div>
+                <span class="exp-period">2022 — Present</span>
+              </div>
+              <ul class="exp-list">
+                <li>Organized and participated in cultural events celebrating Maharashtrian heritage</li>
+                <li>Coordinated inter-club collaborations and cultural festivals</li>
+                <li>Contributed to community building and fostering cultural awareness on campus</li>
+                <li>Managed event logistics and helped grow the club's active membership</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="exp-tag">Community Building</span>
+                <span class="exp-tag">Cultural Events</span>
+                <span class="exp-tag">Teamwork</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       4. EDUCATION
+       ============================================================ -->
+  <section class="education section" id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Education</p>
+        <h2 class="section-title">Academic Journey</h2>
+        <p class="section-subtitle">Building a strong foundation in Computer Science and AI.</p>
+      </div>
+
+      <div class="edu-grid">
+        <!-- VIT Bhopal -->
+        <div class="edu-card reveal">
+          <span class="edu-icon">🎓</span>
+          <h3 class="edu-degree">B.Tech — Computer Science &amp; Engineering</h3>
+          <p class="edu-institution">VIT Bhopal University</p>
+          <p class="edu-period">2022 — 2026</p>
+          <ul class="edu-details">
+            <li>Specialization in AI &amp; Machine Learning</li>
+            <li>Active member of Data Science and Technical Clubs</li>
+            <li>Coursework in Deep Learning, NLP, Computer Vision, and Big Data</li>
+            <li>Building real-world projects in precision agriculture and computer vision</li>
+          </ul>
+        </div>
+
+        <!-- VITyarthi Certifications -->
+        <div class="edu-card reveal">
+          <span class="edu-icon">📚</span>
+          <h3 class="edu-degree">VITyarthi Certifications</h3>
+          <p class="edu-institution">VIT University Program</p>
+          <p class="edu-period">2022 — Present</p>
+          <ul class="edu-details">
+            <li>Completed multiple certified courses through VITyarthi platform</li>
+            <li>Gained hands-on experience in industry-relevant technologies</li>
+            <li>Strengthened professional skills alongside academic curriculum</li>
+            <li>Earned certifications in technical and soft-skill domains</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. PROJECTS
+       ============================================================ -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Projects</p>
+        <h2 class="section-title">What I've Built</h2>
+        <p class="section-subtitle">From computer vision to web development — projects that showcase my skills.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Weed Detection -->
+        <div class="project-card reveal">
+          <div class="project-img" style="background: linear-gradient(135deg, rgba(52,211,153,0.15), rgba(59,130,246,0.15));">
+            <span class="project-emoji">🌿</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Weed Detection System</h3>
+            <p class="project-desc">
+              An advanced computer vision system for precision agriculture that detects and classifies 
+              weeds in crop fields using deep learning. Trained on custom datasets with YOLOv8 architecture 
+              to enable targeted herbicide application, reducing costs and environmental impact.
+            </p>
+
+            <div class="project-outcome">
+              <span class="outcome-icon">📊</span>
+              <span class="outcome-text">88–92% mAP — Production-Ready Accuracy</span>
+            </div>
+
+            <div class="project-tech">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">YOLOv8</span>
+              <span class="tech-pill">OpenCV</span>
+              <span class="tech-pill">PyTorch</span>
+              <span class="tech-pill">TensorFlow</span>
+              <span class="tech-pill">Roboflow</span>
+            </div>
+
+            <div class="project-links">
+              <a href="#" class="project-link" id="project-weed-github">
+                <i class="fa-brands fa-github"></i> Code
+              </a>
+              <a href="#" class="project-link" id="project-weed-demo">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Portfolio Website -->
+        <div class="project-card reveal">
+          <div class="project-img" style="background: linear-gradient(135deg, rgba(139,92,246,0.15), rgba(59,130,246,0.15));">
+            <span class="project-emoji">💼</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Portfolio Website</h3>
+            <p class="project-desc">
+              A modern, responsive portfolio website built from scratch with premium dark theme design. 
+              Features scroll-triggered animations, interactive flip cards, animated progress bars, 
+              tilt-on-hover effects, and a glassmorphic navigation bar — all crafted with pure HTML, CSS, and JavaScript.
+            </p>
+
+            <div class="project-outcome">
+              <span class="outcome-icon">✨</span>
+              <span class="outcome-text">9 Sections — Fully Responsive Premium Design</span>
+            </div>
+
+            <div class="project-tech">
+              <span class="tech-pill">HTML5</span>
+              <span class="tech-pill">CSS3</span>
+              <span class="tech-pill">JavaScript</span>
+              <span class="tech-pill">Font Awesome</span>
+              <span class="tech-pill">Google Fonts</span>
+            </div>
+
+            <div class="project-links">
+              <a href="#" class="project-link" id="project-portfolio-github">
+                <i class="fa-brands fa-github"></i> Code
+              </a>
+              <a href="#hero" class="project-link" id="project-portfolio-live">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       6. SKILLS
+       ============================================================ -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Skills</p>
+        <h2 class="section-title">My Toolkit</h2>
+        <p class="section-subtitle">Technologies and frameworks I work with every day.</p>
+      </div>
+
+      <div class="skills-grid stagger-children reveal">
+        <!-- Languages -->
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">💻</div>
+            <h3 class="skill-cat-title">Languages</h3>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">Python</span><span class="skill-percent" data-target="92">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="92"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">Java</span><span class="skill-percent" data-target="75">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">C / C++</span><span class="skill-percent" data-target="70">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="70"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">SQL</span><span class="skill-percent" data-target="80">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+          </div>
+        </div>
+
+        <!-- AI / ML -->
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">🧠</div>
+            <h3 class="skill-cat-title">AI / ML</h3>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">TensorFlow / Keras</span><span class="skill-percent" data-target="88">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">PyTorch</span><span class="skill-percent" data-target="82">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">Scikit-Learn</span><span class="skill-percent" data-target="90">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">OpenCV</span><span class="skill-percent" data-target="85">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+          </div>
+        </div>
+
+        <!-- Web Development -->
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">🌐</div>
+            <h3 class="skill-cat-title">Web Dev</h3>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">HTML / CSS</span><span class="skill-percent" data-target="85">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">JavaScript</span><span class="skill-percent" data-target="78">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">Flask / Django</span><span class="skill-percent" data-target="72">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="72"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">Streamlit</span><span class="skill-percent" data-target="80">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+          </div>
+        </div>
+
+        <!-- Data Visualization -->
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">📊</div>
+            <h3 class="skill-cat-title">Data Viz</h3>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">Matplotlib / Seaborn</span><span class="skill-percent" data-target="90">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">Plotly / Dash</span><span class="skill-percent" data-target="78">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">Power BI</span><span class="skill-percent" data-target="72">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="72"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">Tableau</span><span class="skill-percent" data-target="68">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="68"></div></div>
+          </div>
+        </div>
+
+        <!-- Cloud / Database -->
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">☁️</div>
+            <h3 class="skill-cat-title">Cloud / DB</h3>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">AWS</span><span class="skill-percent" data-target="72">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="72"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">Google Cloud</span><span class="skill-percent" data-target="70">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="70"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">MySQL / PostgreSQL</span><span class="skill-percent" data-target="82">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">MongoDB</span><span class="skill-percent" data-target="68">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="68"></div></div>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">🤝</div>
+            <h3 class="skill-cat-title">Soft Skills</h3>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">Leadership</span><span class="skill-percent" data-target="90">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">Team Collaboration</span><span class="skill-percent" data-target="92">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="92"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">Problem Solving</span><span class="skill-percent" data-target="88">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span class="skill-name">Communication</span><span class="skill-percent" data-target="85">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       7. CERTIFICATIONS
+       ============================================================ -->
+  <section class="certifications section" id="certifications">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Certifications</p>
+        <h2 class="section-title">Credentials &amp; Certificates</h2>
+        <p class="section-subtitle">Validated knowledge from top platforms and institutions.</p>
+      </div>
+
+      <div class="cert-grid stagger-children reveal">
+        <!-- Google IT Support -->
+        <div class="cert-card" data-tilt>
+          <span class="cert-issuer-badge google">
+            <i class="fa-brands fa-google"></i> Google
+          </span>
+          <h3 class="cert-name">Google IT Support Professional Certificate</h3>
+          <p class="cert-desc">Comprehensive IT fundamentals covering networking, system administration, security, and troubleshooting.</p>
+          <div class="cert-img-wrap">
+            <img src="Certificates/Google IT Support Professional Certificate.jpg" alt="Google IT Support Certificate" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- AWS -->
+        <div class="cert-card" data-tilt>
+          <span class="cert-issuer-badge aws">
+            <i class="fa-brands fa-aws"></i> AWS
+          </span>
+          <h3 class="cert-name">AWS Technical Essentials</h3>
+          <p class="cert-desc">Core AWS services, cloud architecture, and best practices for building scalable cloud solutions.</p>
+          <div class="cert-img-wrap">
+            <img src="Certificates/AWS Skill Builder - AWS Technical Essential.jpg" alt="AWS Technical Essentials Certificate" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Coursera -->
+        <div class="cert-card" data-tilt>
+          <span class="cert-issuer-badge coursera">
+            <i class="fa-solid fa-graduation-cap"></i> Coursera
+          </span>
+          <h3 class="cert-name">Applied Machine Learning in Python</h3>
+          <p class="cert-desc">Hands-on ML techniques using scikit-learn — classification, regression, and model evaluation.</p>
+          <div class="cert-img-wrap">
+            <img src="Certificates/Applied Machine Learning in Python.jpeg" alt="Applied ML in Python Certificate" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- NPTEL -->
+        <div class="cert-card" data-tilt>
+          <span class="cert-issuer-badge nptel">
+            <i class="fa-solid fa-award"></i> NPTEL
+          </span>
+          <h3 class="cert-name">NPTEL Certification</h3>
+          <p class="cert-desc">Nationally recognized certification from NPTEL, validating technical proficiency in core engineering subjects.</p>
+        </div>
+
+        <!-- SkillUP -->
+        <div class="cert-card" data-tilt>
+          <span class="cert-issuer-badge skillup">
+            <i class="fa-solid fa-bolt"></i> SkillUP
+          </span>
+          <h3 class="cert-name">Introduction to Generative AI Studio</h3>
+          <p class="cert-desc">Foundations of generative AI, prompt engineering, and working with large language models.</p>
+          <div class="cert-img-wrap">
+            <img src="Certificates/Introduction to Generative AI Studio.png" alt="Generative AI Studio Certificate" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- VITyarthi -->
+        <div class="cert-card" data-tilt>
+          <span class="cert-issuer-badge vityarthi">
+            <i class="fa-solid fa-certificate"></i> VITyarthi
+          </span>
+          <h3 class="cert-name">VITyarthi Certified Courses</h3>
+          <p class="cert-desc">Multiple certified courses completed through VIT University's learning platform, covering industry-relevant skills.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       8. ACHIEVEMENTS
+       ============================================================ -->
+  <section class="achievements section" id="achievements">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Achievements</p>
+        <h2 class="section-title">Milestones &amp; Impact</h2>
+        <p class="section-subtitle">Numbers and moments that define my journey so far.</p>
+      </div>
+
+      <!-- Stat Counters -->
+      <div class="stats-row stagger-children reveal">
+        <div class="stat-card">
+          <div class="stat-number" data-count="6">0</div>
+          <div class="stat-label">Certifications Earned</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-count="2">0</div>
+          <div class="stat-label">Major Projects</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-count="200">0</div>
+          <div class="stat-label">Club Members Led</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-count="92">0</div>
+          <div class="stat-label">% Best mAP Score</div>
+        </div>
+      </div>
+
+      <!-- Achievement Cards -->
+      <div class="achieve-grid stagger-children reveal">
+        <div class="achieve-card">
+          <div class="achieve-icon">🏆</div>
+          <div class="achieve-content">
+            <h4>Data Science Club — Event Team Lead</h4>
+            <p>Rose from member to Co-Lead to Lead of the Event Team, organizing workshops and hackathons for 200+ members at VIT Bhopal.</p>
+            <div class="achieve-card-img">
+              <img src="Achievements/event in data science club as a Lead of event team.jpeg" alt="Event Team Lead" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+        <div class="achieve-card">
+          <div class="achieve-icon">🎯</div>
+          <div class="achieve-content">
+            <h4>92% mAP — Weed Detection Model</h4>
+            <p>Achieved production-ready accuracy of 88–92% mAP on a custom weed detection dataset using YOLOv8, contributing to precision agriculture research.</p>
+          </div>
+        </div>
+
+        <div class="achieve-card">
+          <div class="achieve-icon">📈</div>
+          <div class="achieve-content">
+            <h4>Co-Lead — Event Team Progression</h4>
+            <p>Served as Co-Lead of the Event Team, coordinating technical events and managing team logistics.</p>
+            <div class="achieve-card-img">
+              <img src="Achievements/event in data science club as a Co - lead of event team.jpeg" alt="Co-Lead Event Team" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+        <div class="achieve-card">
+          <div class="achieve-icon">🌟</div>
+          <div class="achieve-content">
+            <h4>First Event — Data Science Club Member</h4>
+            <p>Participated in the first club event as a founding member, setting the foundation for a thriving data science community at VIT Bhopal.</p>
+            <div class="achieve-card-img">
+              <img src="Achievements/1st event in data science club as a member.jpeg" alt="First Club Event" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       9. CONTACT
+       ============================================================ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Contact</p>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">Have a project in mind or want to collaborate? Let's talk!</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Info Panel -->
+        <div class="contact-info reveal-left">
+          <h3>Get in touch</h3>
+          <p>I'm always open to discussing new opportunities, collaborations, or just having a conversation about AI and technology. Feel free to reach out!</p>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contact-detail-text">
+              <span class="contact-detail-label">Email</span>
+              <a href="mailto:ayushra6111@gmail.com" class="contact-detail-value" id="contact-email-link">ayushra6111@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="contact-detail-text">
+              <span class="contact-detail-label">LinkedIn</span>
+              <a href="https://www.linkedin.com/feed/" class="contact-detail-value" target="_blank" rel="noopener" id="contact-linkedin-link">linkedin.com/in/ayushraj</a>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><i class="fa-brands fa-github"></i></div>
+            <div class="contact-detail-text">
+              <span class="contact-detail-label">GitHub</span>
+              <a href="https://github.com/" class="contact-detail-value" target="_blank" rel="noopener" id="contact-github-link">github.com</a>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="contact-detail-text">
+              <span class="contact-detail-label">Location</span>
+              <span class="contact-detail-value">VIT Bhopal University, India</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap reveal-right">
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" class="form-input" id="formName" placeholder=" " required />
+              <label for="formName" class="form-label">Your Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-input" id="formEmail" placeholder=" " required />
+              <label for="formEmail" class="form-label">Your Email</label>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-input" id="formSubject" placeholder=" " />
+              <label for="formSubject" class="form-label">Subject</label>
+            </div>
+            <div class="form-group">
+              <textarea class="form-textarea" id="formMessage" placeholder=" " required></textarea>
+              <label for="formMessage" class="form-label">Your Message</label>
+            </div>
+            <button type="submit" class="btn-send" id="sendBtn">
+              <i class="fa-solid fa-paper-plane"></i>&nbsp; Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-text">
+          &copy; 2024 <span>Ayush Raj</span>. Crafted with passion &amp; code.
+        </p>
+        <div class="footer-links">
+          <a href="#hero" class="footer-link">Home</a>
+          <a href="#about" class="footer-link">About</a>
+          <a href="#projects" class="footer-link">Projects</a>
+          <a href="#contact" class="footer-link">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
