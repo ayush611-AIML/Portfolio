@@ -996,52 +996,7 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(glowCard);
   }
 
-  // ── 18. NATIVE 3D LANYARD (Standalone Scene) ─────────────────
-  const lanyardContainer = document.getElementById('lanyard-container');
-  if (lanyardContainer) {
-    // 1. Setup Scene, Camera, Renderer
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 0.1, 100);
-    camera.position.set(0, 0, 15);
 
-    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    // Make canvas strictly ignore pointer events so the rest of the site is clickable
-    renderer.domElement.style.pointerEvents = 'none';
-    lanyardContainer.appendChild(renderer.domElement);
-
-    // 2. Lighting
-    const ambientLight = new THREE.AmbientLight(0xffffff, 2.5);
-    scene.add(ambientLight);
-    
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 4);
-    directionalLight.position.set(5, 5, 5);
-    scene.add(directionalLight);
-
-          
-          cardVel.add(springForce);
-        }
-        
-        cardVel.multiplyScalar(damping);
-        cardPos.add(cardVel);
-      }
-
-      cardMesh.position.copy(cardPos);
-      
-      const swingX = (cardPos.x - anchorPoint.x) * 0.15;
-      const swingZ = (cardPos.z - anchorPoint.z) * 0.15;
-      
-      cardMesh.rotation.z = -swingX;
-      cardMesh.rotation.x = swingZ;
-      cardMesh.rotation.y = cardVel.x * 0.3;
-
-      updateString();
-      renderer.render(scene, camera);
-    }
-    
-    animateLanyard();
-  }
 
   // ── Initial state ──────────────────────────────────────────
   handleScrollTop();
