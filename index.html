@@ -16,37 +16,101 @@
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800;900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
+  
+  <!-- GSAP for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
+  <!-- Three.js for 3D backgrounds -->
+  <script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
 </head>
 <body>
+  <!-- 3D Background Container for LiquidEther -->
+  <div id="liquid-ether-container"></div>
+
+  <!-- 3D Lanyard Container -->
+
+
+  <!-- Initial Preloader -->
+  <div class="preloader"></div>
+
   <!-- ============================================================
        NAVIGATION
        ============================================================ -->
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <a href="#hero" class="nav-logo">AR.</a>
+  <nav class="bubble-menu fixed" id="bubbleNavbar" aria-label="Main navigation" style="z-index: 9999;">
+    <a href="#hero" class="bubble logo-bubble" aria-label="Logo" style="background: #1a1a2e; text-decoration: none;">
+      <span class="logo-content" style="color: #fff; font-weight: 700; font-size: 1.5rem; font-family: 'Outfit', sans-serif;">
+        AR.
+      </span>
+    </a>
 
-      <div class="nav-links" id="navLinks">
-        <a href="#hero" class="nav-link active" data-section="hero">Home</a>
-        <a href="#about" class="nav-link" data-section="about">About</a>
-        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
-        <a href="#education" class="nav-link" data-section="education">Education</a>
-        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
-        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
-        <a href="#certifications" class="nav-link" data-section="certifications">Certs</a>
-        <a href="#achievements" class="nav-link" data-section="achievements">Achievements</a>
-        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
-      </div>
-
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+    <button
+      type="button"
+      class="bubble toggle-bubble menu-btn"
+      id="bubbleMenuToggle"
+      aria-label="Toggle navigation"
+      aria-pressed="false"
+      style="background: #1a1a2e;"
+    >
+      <span class="menu-line" style="background: #fff;"></span>
+      <span class="menu-line short" style="background: #fff;"></span>
+    </button>
   </nav>
+
+  <div class="bubble-menu-items fixed" id="bubbleMenuOverlay" aria-hidden="true" style="display: none; z-index: 9998; background: rgba(10, 10, 15, 0.8); backdrop-filter: blur(10px);">
+    <ul class="pill-list" role="menu" aria-label="Menu links">
+      <li role="none" class="pill-col">
+        <a role="menuitem" href="#hero" class="pill-link bubble-menu-link" style="--item-rot: -8deg; --pill-bg: #1a1a2e; --pill-color: #fff; --hover-bg: #3b82f6; --hover-color: #ffffff;">
+          <span class="pill-label">Home</span>
+        </a>
+      </li>
+      <li role="none" class="pill-col">
+        <a role="menuitem" href="#about" class="pill-link bubble-menu-link" style="--item-rot: 8deg; --pill-bg: #1a1a2e; --pill-color: #fff; --hover-bg: #10b981; --hover-color: #ffffff;">
+          <span class="pill-label">About</span>
+        </a>
+      </li>
+      <li role="none" class="pill-col">
+        <a role="menuitem" href="#experience" class="pill-link bubble-menu-link" style="--item-rot: -6deg; --pill-bg: #1a1a2e; --pill-color: #fff; --hover-bg: #f59e0b; --hover-color: #ffffff;">
+          <span class="pill-label">Experience</span>
+        </a>
+      </li>
+      <li role="none" class="pill-col">
+        <a role="menuitem" href="#education" class="pill-link bubble-menu-link" style="--item-rot: 6deg; --pill-bg: #1a1a2e; --pill-color: #fff; --hover-bg: #ef4444; --hover-color: #ffffff;">
+          <span class="pill-label">Education</span>
+        </a>
+      </li>
+      <li role="none" class="pill-col">
+        <a role="menuitem" href="#projects" class="pill-link bubble-menu-link" style="--item-rot: -8deg; --pill-bg: #1a1a2e; --pill-color: #fff; --hover-bg: #8b5cf6; --hover-color: #ffffff;">
+          <span class="pill-label">Projects</span>
+        </a>
+      </li>
+      <li role="none" class="pill-col">
+        <a role="menuitem" href="#skills" class="pill-link bubble-menu-link" style="--item-rot: 8deg; --pill-bg: #1a1a2e; --pill-color: #fff; --hover-bg: #ec4899; --hover-color: #ffffff;">
+          <span class="pill-label">Skills</span>
+        </a>
+      </li>
+      <li role="none" class="pill-col">
+        <a role="menuitem" href="#certifications" class="pill-link bubble-menu-link" style="--item-rot: -4deg; --pill-bg: #1a1a2e; --pill-color: #fff; --hover-bg: #06b6d4; --hover-color: #ffffff;">
+          <span class="pill-label">Certs</span>
+        </a>
+      </li>
+      <li role="none" class="pill-col">
+        <a role="menuitem" href="#achievements" class="pill-link bubble-menu-link" style="--item-rot: 4deg; --pill-bg: #1a1a2e; --pill-color: #fff; --hover-bg: #14b8a6; --hover-color: #ffffff;">
+          <span class="pill-label">Achievements</span>
+        </a>
+      </li>
+      <li role="none" class="pill-col">
+        <a role="menuitem" href="#contact" class="pill-link bubble-menu-link" style="--item-rot: -8deg; --pill-bg: #1a1a2e; --pill-color: #fff; --hover-bg: #f97316; --hover-color: #ffffff;">
+          <span class="pill-label">Contact</span>
+        </a>
+      </li>
+    </ul>
+  </div>
 
   <!-- ============================================================
        1. HERO / LANDING
@@ -81,6 +145,11 @@
           achieving 92% accuracy to leading data science communities.
         </p>
 
+        <div class="variable-proximity-container reveal" style="margin-bottom: 2rem; position: relative;">
+          <!-- Text handled dynamically by script.js -->
+          <span class="variable-proximity" data-label="Hover over these words to see them react! I love turning complex data into beautiful, interactive experiences." style="display: inline; cursor: default;"></span>
+        </div>
+
         <div class="hero-cta reveal">
           <a href="#projects" class="btn btn-primary">
             <i class="fa-solid fa-rocket"></i> View My Work
@@ -113,27 +182,30 @@
       <div class="section-header reveal">
         <p class="section-label">About Me</p>
         <h2 class="section-title">Who I Am</h2>
-        <p class="section-subtitle">A snapshot of my journey, mission, and what drives me forward.</p>
+        <p class="section-subtitle scroll-reveal">A snapshot of my journey, mission, and what drives me forward.</p>
       </div>
 
       <div class="about-grid">
         <!-- Avatar / Monogram -->
         <div class="about-avatar-wrap reveal-left">
-          <div class="about-avatar">
-            <img src="Profil%20pic/profile%20pic%20.jpeg" alt="Ayush Raj" style="width: 100%; height: 100%; object-fit: cover;">
+          <div class="border-glow-card about-avatar-glow">
+            <span class="edge-light"></span>
+            <div class="border-glow-inner about-avatar">
+              <img src="Profil%20pic/profile%20pic%20.jpeg" alt="Ayush Raj" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
+            </div>
           </div>
         </div>
 
         <!-- Content -->
         <div class="about-content reveal-right">
           <h3>Passionate about building AI that matters.</h3>
-          <p>
+          <p class="scroll-reveal">
             I'm Ayush Raj, a B.Tech Computer Science and Engineering student at VIT Bhopal University 
             with a specialization in AI &amp; Machine Learning. My journey started with curiosity about 
             how machines learn from data, and it has evolved into a mission to build intelligent systems 
             that create tangible impact.
           </p>
-          <p>
+          <p class="scroll-reveal">
             From leading the Data Science Club as Event Team Lead to developing computer vision models 
             for precision agriculture, I thrive at the intersection of innovation and execution. I believe 
             in continuous learning, collaborative problem-solving, and pushing the boundaries of what's possible.
@@ -187,7 +259,7 @@
       <div class="section-header reveal">
         <p class="section-label">Experience</p>
         <h2 class="section-title">Where I've Worked</h2>
-        <p class="section-subtitle">Leadership roles and collaborative experiences that shaped my skills.</p>
+        <p class="section-subtitle scroll-reveal">Leadership roles and collaborative experiences that shaped my skills.</p>
       </div>
 
       <div class="timeline">
@@ -258,7 +330,7 @@
       <div class="section-header reveal">
         <p class="section-label">Education</p>
         <h2 class="section-title">Academic Journey</h2>
-        <p class="section-subtitle">Building a strong foundation in Computer Science and AI.</p>
+        <p class="section-subtitle scroll-reveal">Building a strong foundation in Computer Science and AI.</p>
       </div>
 
       <div class="edu-grid">
@@ -301,7 +373,7 @@
       <div class="section-header reveal">
         <p class="section-label">Projects</p>
         <h2 class="section-title">What I've Built</h2>
-        <p class="section-subtitle">From computer vision to web development — projects that showcase my skills.</p>
+        <p class="section-subtitle scroll-reveal">From computer vision to web development — projects that showcase my skills.</p>
       </div>
 
       <div class="projects-grid">
@@ -312,7 +384,7 @@
           </div>
           <div class="project-body">
             <h3 class="project-title">Weed Detection System</h3>
-            <p class="project-desc">
+            <p class="project-desc scroll-reveal">
               An advanced computer vision system for precision agriculture that detects and classifies 
               weeds in crop fields using deep learning. Trained on custom datasets with YOLOv8 architecture 
               to enable targeted herbicide application, reducing costs and environmental impact.
@@ -350,7 +422,7 @@
           </div>
           <div class="project-body">
             <h3 class="project-title">Portfolio Website</h3>
-            <p class="project-desc">
+            <p class="project-desc scroll-reveal">
               A modern, responsive portfolio website built from scratch with premium dark theme design. 
               Features scroll-triggered animations, interactive flip cards, animated progress bars, 
               tilt-on-hover effects, and a glassmorphic navigation bar — all crafted with pure HTML, CSS, and JavaScript.
@@ -387,7 +459,7 @@
           </div>
           <div class="project-body">
             <h3 class="project-title">Regression Modeling & Mathematical Analysis</h3>
-            <p class="project-desc">
+            <p class="project-desc scroll-reveal">
               Conducted a step-by-step mathematical implementation and problem-solving analysis of logistic regression across three distinct synthetic datasets. Compiled an in-depth presentation of linear regression techniques utilizing contemporary research papers.
             </p>
 
@@ -417,7 +489,7 @@
           </div>
           <div class="project-body">
             <h3 class="project-title">RL Interviewer</h3>
-            <p class="project-desc">
+            <p class="project-desc scroll-reveal">
               An interactive reinforcement learning-based interviewer agent designed to conduct technical and behavioral interviews. Leverages advanced RL algorithms to dynamically adapt questioning strategies based on candidate responses.
             </p>
 
@@ -450,8 +522,8 @@
     <div class="container">
       <div class="section-header reveal">
         <p class="section-label">Skills</p>
-        <h2 class="section-title">My Toolkit</h2>
-        <p class="section-subtitle">Technologies and frameworks I work with every day.</p>
+        <h2 class="section-title variable-proximity" data-label="My Toolkit" style="font-family: 'Roboto Flex', sans-serif;">My Toolkit</h2>
+        <p class="section-subtitle scroll-reveal">Technologies and frameworks I work with every day.</p>
       </div>
 
       <div class="skills-grid stagger-children reveal">
@@ -610,7 +682,7 @@
       <div class="section-header reveal">
         <p class="section-label">Certifications</p>
         <h2 class="section-title">Credentials &amp; Certificates</h2>
-        <p class="section-subtitle">Validated knowledge from top platforms and institutions.</p>
+        <p class="section-subtitle scroll-reveal">Validated knowledge from top platforms and institutions.</p>
       </div>
 
       <div class="cert-grid stagger-children reveal">
@@ -691,7 +763,7 @@
       <div class="section-header reveal">
         <p class="section-label">Achievements</p>
         <h2 class="section-title">Milestones &amp; Impact</h2>
-        <p class="section-subtitle">Numbers and moments that define my journey so far.</p>
+        <p class="section-subtitle scroll-reveal">Numbers and moments that define my journey so far.</p>
       </div>
 
       <!-- Stat Counters -->
@@ -768,7 +840,7 @@
       <div class="section-header reveal">
         <p class="section-label">Contact</p>
         <h2 class="section-title">Let's Connect</h2>
-        <p class="section-subtitle">Have a project in mind or want to collaborate? Let's talk!</p>
+        <p class="section-subtitle scroll-reveal">Have a project in mind or want to collaborate? Let's talk!</p>
       </div>
 
       <div class="contact-grid">
