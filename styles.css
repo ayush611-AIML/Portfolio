@@ -2429,3 +2429,94 @@ ul, ol { list-style: none; }
   border-radius: inherit;
 }
 
+
+
+/* ============================================================
+   LIGHTBOX MODAL
+   ============================================================ */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10,14,26,0.9);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: var(--navy-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 30px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+  transform: translateY(20px);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-overlay.active .modal-content {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 28px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: var(--text-primary);
+}
+
+#modalBody .achieve-card-img {
+  max-height: none;
+  border: none;
+  margin-top: 20px;
+}
+
+#modalBody img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  max-height: 70vh;
+  object-fit: contain;
+  object-position: center;
+}
+
+#modalBody h4 {
+  font-size: 1.5rem;
+  color: var(--electric-bright);
+  margin-bottom: 10px;
+  padding-right: 30px;
+}
+
+#modalBody p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.achieve-card { cursor: pointer; }

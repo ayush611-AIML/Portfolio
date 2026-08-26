@@ -1000,4 +1000,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Initial state ──────────────────────────────────────────
   handleScrollTop();
+
+  // ── ACHIEVEMENTS MODAL ──────────────────────────────────────
+  const achieveCards = document.querySelectorAll('.achieve-card');
+  const modalOverlay = document.getElementById('lightboxModal');
+  const modalClose = document.getElementById('modalClose');
+  const modalBody = document.getElementById('modalBody');
+
+  if (achieveCards.length > 0 && modalOverlay) {
+    achieveCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const content = card.querySelector('.achieve-content').innerHTML;
+        modalBody.innerHTML = content;
+        
+        const imgContainer = modalBody.querySelector('.achieve-card-img');
+        if (imgContainer) {
+          imgContainer.style.maxHeight = 'none';
+          const img = imgContainer.querySelector('img');
+          if (img) {
+            img.style.objectFit = 'contain';
+            img.style.maxHeight = '60vh';
+          }
+        }
+
+        modalOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    modalClose.addEventListener('click', () => {
+      modalOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) {
+        modalOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
 });
